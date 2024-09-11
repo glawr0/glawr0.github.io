@@ -1,0 +1,23 @@
+---
+import { getCollection} from "astro:content";
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("dev");
+    return allPosts.map((entry: { slug: any; }) => ({
+        params: {slug: entry.slug},
+        props: {entry},
+    })
+)
+};
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<!-- TODO: This should really be in its own layout file -->
+<BaseLayout pageTitle={entry.data.title}>
+<p>Published: {entry.data.date}</p>
+<p>Written by: {entry.data.author}</p>
+<slot/>
+<Content/>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogPost from '../../components/BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+const pageTitle = "Life Updates";
+const lifePosts = await getCollection("life");
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <p>Here you'll find my monthly updates - mostly just rambling about what I've been upto.</p>
+    <br>
+    <ul style="list-style-type:disc;">
+        {
+        lifePosts
+            .sort((a,b) => b.data.date.getTime() - a.data.date.getTime())
+            .map((post) => <BlogPost url={`/life/${post.slug}`} title={post.data.title} />)
+        }
+    </ul> 
+
+</BaseLayout>
