@@ -1,9 +1,7 @@
 # Ged Lawrenson
 
-## Problem Solver
-
-## Senior Software Engineer
-
+## Problem Solver and Software Engineer
+<br>
 Hello, I'm Ged! 👋
 
 I'm a professional software engineer. I'm primarily focussed on Python development and Cyber Security.
