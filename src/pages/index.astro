@@ -1,14 +1,19 @@
 ---
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getEntry } from 'astro:content';
 
-const pageTitle = "About Me";
+const homeContent = await getEntry('home', 'home');
+const { Content } = await homeContent.render();
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-<h2>Ged Lawrenson - Problem Solver, Senior Software Engineer</h2>
-<p>Hello, I'm Ged! I'm a professional software engineer, primarily focussed on Python development and Cyber Security.</p>
-<p>When I'm not working, I'm usually outdoors and keeping active.</p>
-<p>I use this site to keep my meagre front-end skills up to date. Get in touch if you'd like to connect!</p>
-
+<BaseLayout>
+  <div class="content-image-container">
+    <div class="markdown-content">
+      <Content />
+    </div>
+    <div class="headshot-container">
+      <img src="/headshot.png" alt="My Headshot"/>
+    </div>
+  </div>
 </BaseLayout>

@@ -9,10 +9,10 @@ export async function getStaticPaths() {
         props: {entry},
     })
 )
-};
+}
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await entry.render()
 ---
 <!-- TODO: This should really be in its own layout file -->
 <BaseLayout pageTitle={entry.data.title}>
