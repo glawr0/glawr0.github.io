@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogPost from '../../components/BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+const pageTitle = "Links";
+const links = await getCollection("links");
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <p>Links I've found interesting lately...</p>
+    <p>Under Construction!</p>
+</BaseLayout>

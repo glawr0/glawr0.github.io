@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogPost from '../../components/BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+const pageTitle = "Runs";
+const runs = await getCollection("runs");
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <p>Some runs I've been on lately...</p>
+    <p>Under Construction!</p>
+    <p>Hopefully I can pull this straight from the Strava API</p>
+</BaseLayout>
