@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import BlogPost from '../../components/BlogPost.astro';
+import { getCollection } from 'astro:content';
+
+const pageTitle = "Dev Updates";
+const lifePosts = await getCollection("dev");
+
+---
+<BaseLayout pageTitle={pageTitle}>
+    <p>A space for some Software Engineering posts</p>
+    <br>
+    <ul style="list-style-type:disc;">
+        {
+        lifePosts
+            .sort((a,b) => b.data.date.getTime() - a.data.date.getTime())
+            .map((post) => <BlogPost url={`/dev/${post.slug}`} title={post.data.title} />)
+        }
+    </ul> 
+
+</BaseLayout>

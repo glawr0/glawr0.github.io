@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro'
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Format the date to YYYY-MM-DD
+const formattedDate = new Date(entry.data.date).toISOString().split('T')[0];
+const blogPostTitle = entry.data.title;
+---
+<BaseLayout pageTitle={blogPostTitle}>
+  <h1>{blogPostTitle}</h1>
+  <p>Published: {formattedDate}</p>
+  <p>Written by: {entry.data.author}</p>
+  <br>
+  <div class="markdown-content">
+    <Content />
+  </div>
+</BaseLayout>
