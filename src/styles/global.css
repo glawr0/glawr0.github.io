@@ -1,7 +1,7 @@
 :root {
   --background-color: #f1f5f9;
   --text-color: #333;
-  --accent-color: #ff9776;
+  --accent-color: #f1f5f9;
   --max-width: 80ch;
   --border-radius: 0.5rem;
 }
@@ -81,18 +81,19 @@ h2 {
 
 /* Navigation */
 .nav-links {
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
   display: none;
-  left: 48px;
-  margin: 0;
+  right: 1rem; /* Align to the right */
   top: 5rem;
-  width: 100%;
+  width: auto; /* Adjusted to auto width */
+  position: absolute; /* Added to position the menu */
 }
 
 .nav-links a {
   display: block;
   font-size: 1rem;
   text-align: right;
+  padding: 10px 15px; /* Added padding for better clickability */
 }
 
 .nav-links a:hover,
@@ -106,15 +107,20 @@ h2 {
 
 .hamburger {
   cursor: pointer;
-  padding-right: 20px;
+  padding-right: 10px;
+  position: absolute; /* Position the hamburger absolutely */
+  right: 1rem; /* Align to the right */
+  top: 1rem; /* Adjust top position as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+  
 }
 
 .hamburger .line {
-  background-color: var(--accent-color);
+  background-color: var(--text-color);
   display: block;
-  height: 5px;
-  margin-bottom: 10px;
-  width: 40px;
+  height: 4px;
+  margin-bottom: 5px;
+  width: 30px;
 }
 
 /* Footer */
