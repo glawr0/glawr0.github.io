@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 
 export async function getStaticPaths() {
     const allPosts = await getCollection("life");
-    return allPosts.map((entry: { slug: any; }) => ({
+    return allPosts.map((entry) => ({
         params: {slug: entry.slug},
         props: {entry},
     })
