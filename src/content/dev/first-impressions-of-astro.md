@@ -6,9 +6,9 @@ title: 'First Impressions of Astro'
 
 ## Intro
 
-After seeing Mark McHale's talk at GlasgowJS on the Astro framework I decided to revive my long dormant personal site. I'd like a place to write, even if I'm just shouting into the ether.
+After seeing Jamie McHale's [talk](https://www.jamiemchale.com/dev/talk-glasgowjs-astro-in-15) at [GlasgowJS](https://www.glasgowjs.com/) on the Astro framework I decided to revive my long dormant personal site. I'd like a place to write, even if I'm just shouting into the ether.
 
-The last frontend I built from scratch was for my Honours project, which used Flask and Bootstrap. That was a _while_ ago. More recently I did some TypeScript tweaks to a proprietry UI framework.
+The last frontend I built from scratch was for my Honours project, which used Flask and Bootstrap. That was _quite a while_ ago. More recently I did some TypeScript tweaks to a proprietry UI framework.
 
 I'm really not a fan of front-end stuff, but I'd like to get more comfortable with this type of work. I think being able to build demos or Proof of Concepts from back to front is an invaluable skill for any engineer to have.
 
