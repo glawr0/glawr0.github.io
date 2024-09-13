@@ -1,19 +1,14 @@
+import { rssSchema } from '@astrojs/rss';
 import { defineCollection, z } from 'astro:content';
-
-const postSchema = z.object({
-  author: z.string().min(1).max(100),
-  title: z.string().min(1).max(200),
-  date: z.coerce.date().min(new Date('2000-01-01')).max(new Date()),
-});
 
 const dev = defineCollection({
   type: 'content',
-  schema: postSchema,
+  schema: rssSchema,
 });
 
 const life = defineCollection({
   type: 'content',
-  schema: postSchema,
+  schema: rssSchema,
 });
 
 const home = defineCollection({

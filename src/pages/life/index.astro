@@ -13,7 +13,7 @@ const lifePosts = await getCollection("life");
     <ul style="list-style-type:disc;">
         {
         lifePosts
-            .sort((a,b) => b.data.date.getTime() - a.data.date.getTime())
+            .sort((a,b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
             .map((post) => <BlogPost url={`/life/${post.slug}`} title={post.data.title} />)
         }
     </ul> 
