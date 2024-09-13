@@ -1,6 +1,7 @@
 # Ged Lawrenson
 
 ## Problem Solver and Software Engineer
+
 <br>
 Hello, I'm Ged! 👋
 

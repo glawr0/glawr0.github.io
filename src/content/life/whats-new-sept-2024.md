@@ -1,7 +1,7 @@
 ---
 author: 'Ged Lawrenson'
 description: 'A quick update'
-date: 2024-09-11
+pubDate: 2024-09-11
 tags: ['life', 'blogging', 'learning in public']
 title: "What's New - September 2024"
 ---
