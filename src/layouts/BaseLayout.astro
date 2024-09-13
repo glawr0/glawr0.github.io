@@ -3,7 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
-const description = "Welcome to Ged Lawrenson's personal website. Learn about my life and development experiences.";
+const description = "Welcome to Ged's personal site. Learn about my life and development experiences.";
 
 ---
 <html lang="en">
@@ -19,6 +19,8 @@ const description = "Welcome to Ged Lawrenson's personal website. Learn about my
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="alternate" type="application/rss+xml" title="Ged Lawrenson's Site" href={new URL("feed.xml", Astro.site)}/>
+  
   </head>
   <body>
     <Header />
