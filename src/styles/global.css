@@ -126,7 +126,6 @@ h2 {
   right: 1rem; /* Align to the right */
   top: 1rem; /* Adjust top position as needed */
   z-index: 1000; /* Ensure it's above other elements */
-  
 }
 
 .hamburger .line {
