@@ -1,13 +1,22 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-// import BlogPost from '../../components/BlogPost.astro';
-// import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 const pageTitle = "Links";
-// const links = await getCollection("links");
-
+const allLinks = await getCollection('links');
+const links = allLinks[0].data.links;
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-    <p>Links I've found interesting lately...</p>
-    <p>Under Construction!</p>
+    <h1>{pageTitle}</h1>
+    <p>Here are some links I've been reading lately:</p>
+    <ul>
+        {links.map((link) => (
+            <li>
+                * <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.title}
+                </a>
+            </li>
+        ))}
+    </ul>
 </BaseLayout>

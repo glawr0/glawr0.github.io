@@ -16,4 +16,14 @@ const home = defineCollection({
   schema: z.object({}), // No specific schema for now, as it's a single page
 });
 
-export const collections = { life, dev, home };
+const links = defineCollection({
+  type: 'content',
+  schema: z.object({
+    links: z.array(z.object({
+      title: z.string(),
+      url: z.string().url(),
+    }))
+  })
+});
+
+export const collections = { life, dev, home, links };
