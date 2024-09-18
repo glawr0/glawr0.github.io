@@ -22,6 +22,7 @@ const links = defineCollection({
     links: z.array(z.object({
       title: z.string(),
       url: z.string().url(),
+      date: z.string().date(),
     }))
   })
 });

@@ -5,18 +5,44 @@ import { getCollection } from 'astro:content';
 const pageTitle = "Links";
 const allLinks = await getCollection('links');
 const links = allLinks[0].data.links;
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toISOString().split('T')[0]; // This will format the date as YYYY-MM-DD
+}
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1>{pageTitle}</h1>
-    <p>Here are some things I've been reading lately:</p>
-    <ul>
-        {links.map((link) => (
-            <li>
-                * <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    {link.title}
-                </a>
-            </li>
-        ))}
-    </ul>
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-4">{pageTitle}</h1>
+        <p class="mb-4">Here are some things I've been reading lately:</p>
+        
+        <input type="text" id="filterInput" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Filter links...">
+        
+        <div class="overflow-x-auto">
+            <table id="linksTable" class="table-auto w-full">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="text-left cursor-pointer p-2" data-sort="title">Title</th>
+                        <th class="text-left cursor-pointer p-2" data-sort="url">URL</th>
+                        <th class="text-left cursor-pointer whitespace-nowrap p-2" data-sort="date">Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {links.map((link) => (
+                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                            <td class="p-2">{link.title}</td>
+                            <td class="p-2"><a href={link.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">{link.url}</a></td>
+                            <td class="p-2 whitespace-nowrap" data-date={link.date}>{formatDate(link.date)}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        import { initializeLinksPage } from '../../scripts/links.js';
+        document.addEventListener('DOMContentLoaded', initializeLinksPage);
+    </script>
 </BaseLayout>
