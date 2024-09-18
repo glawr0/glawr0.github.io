@@ -23,17 +23,15 @@ function formatDate(dateString) {
             <table id="linksTable" class="table-auto w-full">
                 <thead>
                     <tr class="bg-gray-100">
+                        <th class="text-left cursor-pointer p-2" data-sort="date">Date Added</th>
                         <th class="text-left cursor-pointer p-2" data-sort="title">Title</th>
-                        <th class="text-left cursor-pointer p-2" data-sort="url">URL</th>
-                        <th class="text-left cursor-pointer whitespace-nowrap p-2" data-sort="date">Date Added</th>
                     </tr>
                 </thead>
                 <tbody>
                     {links.map((link) => (
                         <tr class="border-b border-gray-200 hover:bg-gray-50">
-                            <td class="p-2">{link.title}</td>
-                            <td class="p-2"><a href={link.url} class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">{link.url}</a></td>
-                            <td class="p-2 whitespace-nowrap" data-date={link.date}>{formatDate(link.date)}</td>
+                            <td class="p-2" data-date={link.date}>{formatDate(link.date)}</td>
+                            <td class="p-2"><a href={link.url} class="over:underline" target="_blank" rel="noopener noreferrer">{link.title}</a></td>
                         </tr>
                     ))}
                 </tbody>
