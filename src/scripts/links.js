@@ -14,7 +14,7 @@ const sortTable = (column) => {
     rows.sort((a, b) => {
         const aValue = getCellValue(a, column);
         const bValue = getCellValue(b, column);
-        return currentSort.ascending ? compareValues(aValue, bValue) : compareValues(bValue, aValue);
+        return currentSort.descending ? compareValues(aValue, bValue) : compareValues(bValue, aValue);
     });
 
     tbody.append(...rows);
