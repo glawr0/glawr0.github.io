@@ -5,7 +5,9 @@ const filterTable = () => {
 
     rows.forEach(row => {
         const text = Array.from(row.cells).map(cell => cell.textContent.toLowerCase()).join(' ');
-        row.classList.toggle('hidden', !text.includes(filter));
+        const tags = row.dataset.tags ? row.dataset.tags.toLowerCase() : '';
+        const matchesFilter = text.includes(filter) || tags.includes(filter);
+        row.classList.toggle('hidden', !matchesFilter);
     });
 };
 

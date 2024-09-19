@@ -23,6 +23,7 @@ const links = defineCollection({
       title: z.string(),
       url: z.string().url(),
       date: z.string().date(),
+      tags: z.array(z.string())
     }))
   })
 });

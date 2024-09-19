@@ -17,7 +17,7 @@ function formatDate(dateString) {
         <h1 class="text-3xl font-bold mb-4">{pageTitle}</h1>
         <p class="mb-4">Here are some things I've been reading lately:</p>
         
-        <input type="text" id="filterInput" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Filter links...">
+        <input type="text" id="filterInput" class="w-full p-2 mb-4 border border-gray-300 rounded" placeholder="Filter links by title, content, or tags (e.g., 'software', 'career')...">
         
         <div class="overflow-x-auto">
             <table id="linksTable" class="table-auto w-full">
@@ -25,13 +25,19 @@ function formatDate(dateString) {
                     <tr class="bg-gray-100">
                         <th class="text-left cursor-pointer p-2" data-sort="date">Date Added</th>
                         <th class="text-left cursor-pointer p-2" data-sort="title">Title</th>
+                        <th class="text-left p-2">Tags</th>
                     </tr>
                 </thead>
                 <tbody>
                     {links.map((link) => (
-                        <tr class="border-b border-gray-200 hover:bg-gray-50">
+                        <tr class="border-b border-gray-200 hover:bg-gray-50" data-tags={link.tags.join(',')}>
                             <td class="p-2" data-date={link.date}>{formatDate(link.date)}</td>
-                            <td class="p-2"><a href={link.url} class="over:underline" target="_blank" rel="noopener noreferrer">{link.title}</a></td>
+                            <td class="p-2"><a href={link.url} class="hover:underline" target="_blank" rel="noopener noreferrer">{link.title}</a></td>
+                            <td class="p-2">
+                                {link.tags.map((tag) => (
+                                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</span>
+                                ))}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
