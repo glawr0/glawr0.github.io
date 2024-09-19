@@ -1,5 +1,7 @@
 # My Personal Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4ace75a3-b451-4062-826a-53036137f42a/deploy-status)](https://app.netlify.com/sites/glawr0/deploys)
+
 This is the source code for my personal website, built with Astro.
 
 ## Setup
