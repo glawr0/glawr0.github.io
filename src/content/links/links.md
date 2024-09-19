@@ -1,8 +1,11 @@
 ---
 links:
+  - title: "LocoHome Retrofit"
+    url: https://locohome.coop/
+    date: "2024-09-18"
   - title: "Staff Eng"
     url: https://staffeng.com/
-    date: "2023-09-18"
+    date: "2024-09-18"
   - title: "1 to 1 Question Bank"
     url: https://terrybrown.me/posts/2024/one-to-one-question-bank/
     date: "2024-09-18"
@@ -24,15 +27,21 @@ links:
   - title: Google Technical Writing Course
     url: https://developers.google.com/tech-writing/one#pre-class_and_in-class_components
     date: "2024-08-03"
-  - title: Lenny's Newsletter
+  - title: "Lenny's Newsletter"
     url: https://www.lennysnewsletter.com/
     date: "2024-07-25"
-  - title: The Prgramatic Engineer Newsletter
+  - title: "The Pragmatic Engineer Newsletter"
     url: https://blog.pragmaticengineer.com/newsletter/
     date: "2024-07-30"
-  - title: The Age 30 Crisis and Seasons of a Man's Life
+  - title: "The Age 30 Crisis and Seasons of a Man's Life"
     url: https://www.robkhenderson.com/p/the-age-30-crisis-and-seasons-of
     date: "2024-05-05"
+  - title: "The $440 Million Software Error at Knight Capital"
+    url: "https://www.henricodolfing.com/2019/06/project-failure-case-study-knight-capital.html"
+    date: "2019-06-21"
+  - title: "They Write the Right Stuff"
+    url: https://www.eng.auburn.edu/~kchang/comp6710/readings/They%20Write%20the%20Right%20Stuff.pdf
+    date: "2015-06-01"
   - title: The Modern Nomad - What are you waiting for?
     url: https://www.thingsinsquares.com/tale/modern-nomad/
     date: "2015-01-01"
