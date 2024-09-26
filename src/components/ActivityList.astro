@@ -62,7 +62,7 @@
             if (activities.length > 0) {
                 activityList.innerHTML = activities.map(activity => `
                     <li class="activity-item">
-                        <h3>${activity.title}</h3>
+                        <h3><b>${activity.title}</b></h3>
                         <p>Date: ${formatDate(activity.date)}</p>
                         <p>${activity.description}</p>
                         <a href="${activity.link}" target="_blank" rel="noopener noreferrer">View on Strava</a>
