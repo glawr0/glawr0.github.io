@@ -1,14 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
-// import BlogPost from '../../components/BlogPost.astro';
-// import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ActivityList from '../../components/ActivityList.astro';
 
-const pageTitle = "Runs";
-// const runs = await getCollection("runs");
-
+const pageTitle = "Workouts";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-    <p>Some runs I've been on lately...</p>
-    <p>Under Construction!</p>
-    <p>Hopefully I can pull this straight from the Strava API</p>
+    <section aria-labelledby="recent-workouts-heading">
+        <h1 id="recent-workouts-heading">Recent Workouts</h1>
+        <ActivityList/>
+    </section>
 </BaseLayout>

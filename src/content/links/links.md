@@ -1,5 +1,9 @@
 ---
 links:
+  - title: "The Best Python Featue You Cannot Use"
+    url: https://www.bitecode.dev/p/the-best-python-feature-you-cannot
+    date: "2023-09-21"
+    tags: ["python", "software"]
   - title: "LocoHome Retrofit"
     url: https://locohome.coop/
     date: "2024-09-18"
@@ -23,11 +27,11 @@ links:
   - title: "c3js: A D3-based reusable chart library"
     url: https://github.com/c3js/c3
     date: "2024-09-13"
-    tags: ["javascript", "data-visualization"]
+    tags: ["javascript", "data-visualization","software"]
   - title: "PyGWalker: Turn your pandas dataframe into an interactive UI for visual analysis"
     url: https://github.com/Kanaries/pygwalker
     date: "2024-09-13"
-    tags: ["python", "data-analysis"]
+    tags: ["python", "data-analysis", "software"]
   - title: "Keeping CALM: When Distributed Consistency is Easy"
     url: https://arxiv.org/pdf/1901.01930
     date: "2024-09-02"
