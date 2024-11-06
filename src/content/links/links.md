@@ -1,8 +1,20 @@
 ---
 links:
+  - title: "Know Your Once Job and Do It First"
+    url: https://charity.wtf/2021/03/07/know-your-one-job-and-do-it-first/
+    date: "2024-11-06"
+    tags: ["career", "engineering"]
+  - title: "How To Become A More Effective Engineer"
+    url: https://newsletter.pragmaticengineer.com/p/how-to-become-a-more-effective-engineer
+    date: "2024-11-06"
+    tags: ["career", "engineering"]
+  - title: "NPM Dependency Graph"
+    url: https://npm.anvaka.com/#/view/3d/better-auth
+    date: "2024-09-28"
+    tags: ["javascript", "software"]
   - title: "The Best Python Featue You Cannot Use"
     url: https://www.bitecode.dev/p/the-best-python-feature-you-cannot
-    date: "2023-09-21"
+    date: "2024-09-21"
     tags: ["python", "software"]
   - title: "LocoHome Retrofit"
     url: https://locohome.coop/

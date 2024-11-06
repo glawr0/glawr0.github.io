@@ -11,6 +11,4 @@ In the past I've worked in Cloud, DevOps, Systems Administration, and as a Consu
 
 When I'm not working, I'm usually outdoors and keeping active.
 
-I'm using this site to build my front-end skills.
-
 Get in touch if you'd like to connect!
