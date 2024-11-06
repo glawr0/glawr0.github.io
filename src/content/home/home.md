@@ -9,6 +9,6 @@ I'm a professional software engineer. I'm primarily focussed on Python developme
 
 In the past I've worked in Cloud, DevOps, Systems Administration, and as a Consultant.
 
-When I'm not working, I'm usually outdoors and keeping active.
+Outside of work, I'm usually outdoors, travelling or keeping fit.
 
 Get in touch if you'd like to connect!
